@@ -9,7 +9,13 @@ st.set_page_config(
     page_icon=company_logo
 )
 
-partner = st.experimental_get_query_params()["show_map"]["partner"][0]
+params = st.experimental_get_query_params()
+
+try:
+    partner = dict(params)["partner"][0]
+except (KeyError, TypeError):
+    partner = ""
+
 chain = load_chain()
 
 if 'messages' not in st.session_state:
