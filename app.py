@@ -9,11 +9,12 @@ st.set_page_config(
     page_icon=company_logo
 )
 
+partner = st.experimental_get_query_params()["show_map"]["partner"][0]
 chain = load_chain()
 
 if 'messages' not in st.session_state:
     st.session_state['messages'] = [{"role": "assistant", 
-                                  "content": "Hi human! I am Xuberan's smart AI. How can I help you today?"}]
+                                  "content": f"Hi {partner}! I am Xuberan's smart AI. How can I help you today?"}]
 
 for message in st.session_state.messages:
     if message["role"] == 'assistant':
