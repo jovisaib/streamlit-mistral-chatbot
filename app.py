@@ -2,7 +2,7 @@ import time
 import streamlit as st
 from utils import load_chain
 
-company_logo = ''
+company_logo = 'https://influencermarketinghub.com/agency/wp-content/uploads/2023/03/102376.jpg'
 
 st.set_page_config(
     page_title="Xuberan Notion Chatbot",
