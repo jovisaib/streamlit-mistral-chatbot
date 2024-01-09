@@ -13,8 +13,10 @@ params = st.experimental_get_query_params()
 
 try:
     partner = dict(params)["partner"][0]
+    if '?' in partner:
+        partner = partner.split('?')[0]
 except (KeyError, TypeError):
-    partner = ""
+    partner = "Human"
 
 chain = load_chain()
 
