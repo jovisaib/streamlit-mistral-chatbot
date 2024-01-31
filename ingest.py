@@ -1,4 +1,3 @@
-import streamlit as st
 from langchain.embeddings import HuggingFaceEmbeddings
 from langchain.document_loaders import NotionDirectoryLoader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
