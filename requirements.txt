@@ -1,4 +1,4 @@
-langchain
+langchain==0.1.0
 faiss-cpu
 tiktoken
 sentence-transformers
